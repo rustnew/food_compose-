@@ -1,0 +1,188 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Cahier des Charges pour l'Optimisation de la Formulation Alimentaire des Poulets de Chair}
+\author{}
+\date{}
+\maketitle
+
+\section{Introduction}
+Ce document définit les exigences pour le développement d'un modèle d'optimisation de la formulation alimentaire pour les poulets de chair. L'objectif principal est de maximiser la qualité de la viande (goût, tendreté, jutosité) tout en minimisant les coûts de production. Le modèle doit intégrer les besoins nutritionnels standards, les critères de qualité de la viande et les contraintes économiques, tout en restant adaptable à différents contextes de production.
+
+\section{Objectifs}
+\begin{enumerate}
+    \item \textbf{Maximiser la qualité de la viande :}
+    \begin{itemize}
+        \item Améliorer le goût via une composition optimale en acides gras et nutriments.
+        \item Assurer une texture tendre et juteuse.
+        \item Maintenir une couleur attractive pour les consommateurs.
+        \item Respecter les standards nutritionnels pour la consommation humaine.
+    \end{itemize}
+    \item \textbf{Minimiser les coûts :}
+    \begin{itemize}
+        \item Réduire le coût total de la formulation tout en respectant les contraintes nutritionnelles et de qualité.
+    \end{itemize}
+\end{enumerate}
+
+\section{Contraintes}
+\begin{enumerate}
+    \item \textbf{Contraintes nutritionnelles :}
+    \begin{itemize}
+        \item Respecter les besoins minimaux en protéines (21 \%), énergie (12,8 MJ/kg), calcium (0,95 \%), phosphore (0,45 \%), et autres nutriments essentiels, basés sur des standards reconnus (\textit{Poultry Hub Australia}, \textit{Merck Veterinary Manual}).
+        \item Adapter les niveaux de nutriments aux phases de croissance (démarrage, croissance, finition).
+    \end{itemize}
+    \item \textbf{Contraintes de qualité :}
+    \begin{itemize}
+        \item Optimiser la composition en acides gras pour améliorer le goût.
+        \item Inclure des minéraux (calcium, phosphore, sodium, chlorure) pour soutenir la croissance et la jutosité.
+    \end{itemize}
+    \item \textbf{Contraintes techniques :}
+    \begin{itemize}
+        \item Utiliser des ingrédients disponibles sur le marché.
+        \item Assurer la compatibilité avec les équipements de production existants.
+    \end{itemize}
+    \item \textbf{Contraintes économiques :}
+    \begin{itemize}
+        \item Prendre en compte les coûts variables des ingrédients.
+    \end{itemize}
+\end{enumerate}
+
+\section{Entrées}
+\begin{enumerate}
+    \item \textbf{Données sur les ingrédients :}
+    \begin{itemize}
+        \item Composition nutritionnelle (protéines, énergie, minéraux, etc.).
+        \item Coûts unitaires (\$/kg).
+        \item Disponibilité sur le marché.
+    \end{itemize}
+    \item \textbf{Besoins nutritionnels :}
+    \begin{itemize}
+        \item Exigences pour la phase de croissance (par exemple, 21 \% protéines, 12,8 MJ/kg énergie).
+    \end{itemize}
+    \item \textbf{Paramètres de qualité :}
+    \begin{itemize}
+        \item Critères pour le goût (profil d'acides gras), la texture et la couleur.
+    \end{itemize}
+\end{enumerate}
+
+\section{Sorties}
+\begin{enumerate}
+    \item \textbf{Formulation optimale :}
+    \begin{itemize}
+        \item Proportions des ingrédients (en \%).
+        \item Coût total de la formulation (\$/kg).
+        \item Valeurs nutritionnelles (protéines, énergie, minéraux).
+        \item Prédictions sur la qualité de la viande (goût, texture).
+    \end{itemize}
+    \item \textbf{Indicateurs de performance :}
+    \begin{itemize}
+        \item Taux de conversion alimentaire (FCR).
+        \item Gain de poids quotidien (ADG).
+        \item Scores de qualité (goût, tendreté, jutosité).
+    \end{itemize}
+\end{enumerate}
+
+\section{Méthodologie}
+\begin{enumerate}
+    \item \textbf{Programmation linéaire :}
+    \begin{itemize}
+        \item Utiliser des algorithmes d'optimisation pour minimiser les coûts tout en respectant les contraintes nutritionnelles et de qualité.
+    \end{itemize}
+    \item \textbf{Modèles de prédiction :}
+    \begin{itemize}
+        \item Intégrer des modèles (régression, apprentissage automatique) pour prédire l'impact des formulations sur la qualité de la viande.
+    \end{itemize}
+    \item \textbf{Validation :}
+    \begin{itemize}
+        \item Tester les formulations via des simulations ou des essais réels.
+    \end{itemize}
+\end{enumerate}
+
+\section{Outils et Logiciels}
+\begin{enumerate}
+    \item \textbf{Logiciels de formulation :}
+    \begin{itemize}
+        \item Feed Access, WinFeed, AFOS.
+    \end{itemize}
+    \item \textbf{Langages de programmation :}
+    \begin{itemize}
+        \item Python (PuLP, SciPy).
+        \item R pour l'analyse statistique.
+    \end{itemize}
+    \item \textbf{Bases de données :}
+    \begin{itemize}
+        \item Données sur les ingrédients et les prix du marché.
+    \end{itemize}
+\end{enumerate}
+
+\section{Étapes de Développement}
+\begin{enumerate}
+    \item \textbf{Collecte de données :}
+    \begin{itemize}
+        \item Rassembler les données sur les ingrédients, besoins nutritionnels et critères de qualité.
+    \end{itemize}
+    \item \textbf{Définition des contraintes et objectifs :}
+    \begin{itemize}
+        \item Spécifier les contraintes nutritionnelles et les objectifs de qualité/cost.
+    \end{itemize}
+    \item \textbf{Développement du modèle :}
+    \begin{itemize}
+        \item Implémenter l'algorithme d'optimisation.
+        \item Intégrer des modèles de prédiction pour la qualité.
+    \end{itemize}
+    \item \textbf{Validation et test :}
+    \begin{itemize}
+        \item Tester avec des données historiques ou des essais pratiques.
+    \end{itemize}
+    \item \textbf{MMise en production :}
+    \begin{itemize}
+        \item Intégrer le modèle dans les processus de production.
+    \end{itemize}
+\end{enumerate}
+
+\section{Considérations Supplémentaires}
+\begin{enumerate}
+    \item \textbf{Durabilité :}
+    \begin{itemize}
+        \item Évaluer l'impact environnemental (empreinte carbone, utilisation des ressources).
+    \end{itemize}
+    \item \textbf{Flexibilité :}
+    \begin{itemize}
+        \item Adapter le modèle à différentes phases de croissance ou types de volaille.
+    \end{itemize}
+    \item \textbf{Mise à jour :}
+    \begin{itemize}
+        \item Permettre des mises à jour régulières des données (prix, disponibilité).
+    \end{itemize}
+\end{enumerate}
+
+\section{Exemple de Besoins Nutritionnels}
+\begin{table}[h]
+\centering
+\caption{Besoins nutritionnels pour la phase de croissance des poulets de chair}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Nutriment} & \textbf{Besoin Minimum} & \textbf{Source} \\
+\midrule
+Protéines & 21,0 \% & Poultry Hub \\
+Énergie & 12,8 MJ/kg & Merck Veterinary Manual \\
+Calcium & 0,95 \% & Poultry Hub \\
+Phosphore & 0,45 \% & Merck Veterinary Manual \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+Ce cahier des charges fournit une feuille de route pour développer un modèle d'optimisation alimentaire qui améliore la qualité de la viande des poulets de chair tout en minimisant les coûts. Il intègre des standards nutritionnels, des critères de qualité et des contraintes économiques pour répondre aux besoins de l'industrie avicole.
+
+\end{document}
